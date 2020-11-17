@@ -1,4 +1,5 @@
 import os
+<<<<<<< HEAD
 direccion = r""
 archivo = input('Nombre archivo: ')
 precio = input('Precio: ')
@@ -9,6 +10,18 @@ if imagen <= "1":
 elif imagen == "2":
     imagen = "../resources/images/corales/"
 elif imagen >= "3":
+=======
+direccion = r"C:\Users\Toni\Documents\Toni\FPGS_DAW_DUAL\LLM\REPOSITORI_ACTIVITATS\LLM\practica_bloc_1\4\animales\\"
+archivo = input('Nombre archivo: ')
+precio = input('Precio: ')
+descripcion = input('Descripcion: ')
+imagen = input('[1]pez  [2]coral  [3]invertebrado')
+if imagen == "1":
+    imagen = "../resources/images/peces/"
+elif imagen == "2":
+    imagen = "../resources/images/corales/"
+elif imagen == "3":
+>>>>>>> 816979fc1778a2fc9c997e4170cc0615bb042dc8
     imagen = "../resources/images/invertebrados/"
 nombre = archivo[0].upper() + archivo[1:archivo.find("-")] + " " + archivo[archivo.find("-") + 1].upper() + archivo[archivo.find("-") + 2:]
 file = open(archivo + ".html", "w", encoding="utf-8")
@@ -38,7 +51,11 @@ file.write("<a href=\"../index.html\">Ofertas</a>" + os.linesep)
 file.write("</div>" + os.linesep)
 file.write("</div>" + os.linesep)
 file.write("<div class=\"producto\">" + os.linesep)
+<<<<<<< HEAD
 file.write("<img src=\"" + imagen + archivo + ".jpg\" alt=\"" + archivo + "\">" + os.linesep)
+=======
+file.write("<img src=\"" + imagen + "" + archivo + ".jpg\" alt=\"" + archivo + "\">" + os.linesep)
+>>>>>>> 816979fc1778a2fc9c997e4170cc0615bb042dc8
 file.write("<div class=\"info\">" + os.linesep)
 file.write("<h3>" + nombre + "</h3>" + os.linesep)
 file.write("<h1>" + str(precio) + "€</h1>" + os.linesep)
@@ -47,7 +64,11 @@ file.write("</div>" + os.linesep)
 file.write("</div>" + os.linesep)
 file.write("<footer>" + os.linesep)
 file.write("" + chr(169) + " Diseñado y realizado por Antoni Pizarro 2020. Todos los derechos reservados." + os.linesep)
+<<<<<<< HEAD
 file.write("</footer>") + os.linesep
+=======
+file.write("</footer>" + os.linesep)
+>>>>>>> 816979fc1778a2fc9c997e4170cc0615bb042dc8
 file.write("</body>" + os.linesep)
 file.write("</html>")
 file.close()
