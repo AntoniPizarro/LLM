@@ -72,3 +72,11 @@ a:visited {
     color: black;
     text-decoration: none;
 }
+.video{
+    margin: 0 auto;
+    width: 400px;
+}
+a#enlace{
+    color: blue;
+    text-decoration: none;
+}
