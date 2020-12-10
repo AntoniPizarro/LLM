@@ -1,7 +1,50 @@
-//8- Escriu un script que permeti afegir contingut a la pàgina web. 
-//Es tracta de crear una llista de Paisos i per cada element d'aquesta 
-//llista, s'ha de crear una subllista amb el continent al que pertany 
-//el país, la llengua majoritària que es xerra al país i  la seva 
-//moneda (tot s'ha de demanar per pantalla). La llista ha de tenir els 
-//següents estils: color de la lletra vermell, grandària del elements 20pt.
+paisos = {"nom" : [], "continent" : [], "llengua" : [], "moneda" : []};
 
+function demanarDades(){
+    var pais = prompt("Nom del país:");
+    if(pais == ""){
+        paisos["nom"].push("");
+    }else{
+        paisos["nom"].push(pais);
+    }
+
+    var continent = prompt("Nom del continent:");
+    if(continent == ""){
+        paisos["continent"].push("");
+    }else{
+        paisos["continent"].push(continent);
+    }
+
+    var llengua = prompt("Nom del llenguatge:");
+    if(llengua == ""){
+        paisos["llengua"].push("");
+    }else{
+        paisos["llengua"].push(llengua);
+    }
+
+    var moneda = prompt("Nom de la moneda:");
+    if(moneda == ""){
+        paisos["moneda"].push("");
+    }else{
+        paisos["moneda"].push(moneda);
+    }
+    
+    repetir();
+}
+
+function repetir(){
+    conf = confirm("Vols introduir un país?");
+    if(conf == true){
+        demanarDades();
+    }else{
+        introduir();
+    }
+}
+
+function introduir(){
+    for(i = paisos["nom"].length; i > 0; i--){
+        document.writeln("<ul><li>" + paisos["nom"][i - 1] + "<ul><li>" + paisos["continent"][i - 1] + "</li><li>" + paisos["llengua"][i - 1] + "</li><li>" + paisos["moneda"][i - 1] + "</ul></li></li></ul>");
+    }
+}
+
+demanarDades();
