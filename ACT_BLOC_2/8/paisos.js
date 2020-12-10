@@ -3,7 +3,7 @@ paisos = {"nom" : [], "continent" : [], "llengua" : [], "moneda" : []};
 function demanarDades(){
     var pais = prompt("Nom del país:");
     if(pais == ""){
-        paisos["nom"].push("");
+        paisos["nom"].push(""); //push = append
     }else{
         paisos["nom"].push(pais);
     }
@@ -43,7 +43,7 @@ function repetir(){
 
 function introduir(){
     for(i = paisos["nom"].length; i > 0; i--){
-        document.writeln("<ul><li>" + paisos["nom"][i - 1] + "<ul><li>" + paisos["continent"][i - 1] + "</li><li>" + paisos["llengua"][i - 1] + "</li><li>" + paisos["moneda"][i - 1] + "</ul></li></li></ul>");
+        document.writeln("<ul><li>Pais: " + paisos["nom"][i - 1] + "<ul><li>Continent: " + paisos["continent"][i - 1] + "</li><li>LLengua: " + paisos["llengua"][i - 1] + "</li><li>Moneda: " + paisos["moneda"][i - 1] + "</ul></li></li></ul>");
     }
 }
 
