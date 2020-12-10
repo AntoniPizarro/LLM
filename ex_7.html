@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nom = prompt("Nom:");
+        var edat = prompt("Edat:");
+        var estatura = prompt("Estatura (cm):");
+        var estatCivil = prompt("Casat?:");
+        if (estatCivil == "si" || estatCivil == "SI" || estatCivil == "Si" || estatCivil == "sI"){
+            document.write("El meu nom es " + nom + ", tenc " + edat + " anys, la meva estatura és de " + estatura + " i estic casat");
+        }
+        else{
+            document.writeln("Nom: " + nom + "<br/>");
+            document.writeln("Edat: " + edat + "<br/>");
+            document.writeln("Estatura: " + estatura + "<br/>");
+            document.writeln("Estat civil: " + estatCivil + "<br/>");
+        }
+    </script>
+</body>
+</html>
