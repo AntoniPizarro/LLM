@@ -1,39 +1,39 @@
-var numeros = prompt("Escriu 10 numeros separats per comes:");
-var numeros = numeros.split(",");
-
 function sumar(num){
     let resultat = 0;
-    for (n in num){
-        resultat += parseInt(n);
+    for (i = 0; i < 10; i++){
+        resultat += parseInt(num[i]);
     }
     alert("La suma es " + resultat);
 }
 
 function multiplicar(num){
     let resultat = 1;
-    for (n in num){
-        resultat *= parseInt(n);
+    for (i = 0; i < 10; i++){
+        resultat *= parseInt(num[i]);
     }
     alert("La multiplicació es " + resultat);
 }
 
-function demanarSuma(){
+function demanarSuma(numero){
     let accio = confirm("Vols fer la suma?");
     if(accio == true){
-        sumar(numeros);
+        sumar(numero);
     }else{
-        dmanarMultiplicacio();
+        demanarMultiplicacio(numero);
     }
 }
 
-function dmanarMultiplicacio(){
+function demanarMultiplicacio(numero){
     let accio = confirm("Vols fer la multiplicar?");
     if(accio == true){
-        multiplicar(numeros);
+        multiplicar(numero);
     }else{
-        demanarSuma();
+        demanarSuma(numero);
     }
     
 }
 
-demanarSuma();
+var numeros = prompt("Escriu 10 números separats per comes:");
+numeros = numeros.split(",");
+
+demanarSuma(numeros);
